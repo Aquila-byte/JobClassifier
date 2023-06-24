@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Job Postings Classifier</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/all.min.css" rel="stylesheet">
+  <link href="static/animate.min.css" rel="stylesheet">
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+  <link href="static/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/boxicons.min.css" rel="stylesheet">
+  <link href="static/glightbox.min.css" rel="stylesheet">
+  <link href="static/remixicon.css" rel="stylesheet">
+  <link href="static/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/6358d57632.js" crossorigin="anonymous"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="static/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Fake Job Posting Identifier</h2>
+          <p>
+            "This Fake Job Posting Identifier web app is a powerful tool designed to help job seekers identify fraudulent job listings and protect themselves from scams. With the increasing prevalence of fake job postings, it can be challenging for job seekers to distinguish between legitimate opportunities and deceptive postings.<br> 
+            This web app utilizes machine learning algorithms to analyze job descriptions, company information, and other relevant data to identify potential red flags indicating a fake job posting.
+            Using our user-friendly interface, job seekers can easily enter the details of a job posting they are unsure about. The app then processes the information and provides an assessment of the job's authenticity. The assessment is based on a trained machine learning model that has been trained on a vast database of legitimate and fraudulent job postings.<br>
+            The model considers various factors such as suspicious keywords, unrealistic job requirements, incomplete contact information, and other patterns commonly found in fake postings. <br>
+            
+            By leveraging the power of machine learning, our Fake Job Posting Identifier app empowers job seekers to make informed decisions and avoid falling victim to scams. It offers a reliable and efficient solution to combat the growing issue of fake job postings, giving job seekers peace of mind and helping them navigate the job market with confidence."</p>
+        </div>
+
+        <form action="/predict" method="post">
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <select name="Experience" id="Experience" class="form-select" required>
+                <option value="">What is the Required Experience</option>
+                <option value="Not Applicable">Not Applicable</option>
+                <option value="Internship">Internship</option>
+                <option value="Entry level">Entry level</option>
+                <option value="Associate">Associate</option>
+                <option value="Mid-Senior level">Mid-Senior level</option>
+                <option value="Executive">Executive</option>
+                <option value="Director">Director</option>
+                <option value="Others">Others</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="Education" id="Education" class="form-select" required>
+                <option value="">What is the Required Education Level</option>
+                <option value="High School or equivalent">High School or equivalent</option>
+                <option value="Some College Coursework Completed">Some College Coursework Completed</option>
+                <option value="Vocational">Vocational</option>
+                <option value="Certification">Certification</option>
+                <option value="Some High School Coursework">Some High School Coursework</option>
+                <option value="Vocational - Degree">Vocational - Degree</option>
+                <option value="Vocational - HS Diploma">Vocational - HS Diploma</option>
+                <option value="Professional">Professional</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Associate Degree">Associate Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate">Doctorate</option>
+                <option value="Unspecified">Unspecified</option>
+                <option value="Others">Others</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="Employment" id="Employment" class="form-select" required>
+                <option value="">What is the Employment Type</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+                <option value="Temporary">Temporary</option>
+                <option value="Other">Other</option>
+                
+              </select>
+              <div class="validate"></div>
+            </div>
+          <div class="row"></div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="Telecommuting" id="Telecommuting" class="form-select" required>
+                <option value="">Telecommuting</option>
+                <option value="Remote">Remote</option>
+                <option value="On-site">On-site</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="Logo" id="Logo" class="form-select" required>
+                <option value="">Is There a Company Logo</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="Question" id="Question" class="form-select" required>
+                <option value="">Are There Questions</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+          </div>
+          <style>
+            body {
+                text-align: center;
+            }
+    
+            .colorful-button {
+                background-color: #1977cc;
+                color: white;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+    
+            .colorful-button:hover {
+                background-color: #1977cc;
+            }
+        </style>
+          
+          <div class="text-center">
+            <button type="submit" class= "colorful-button">Check Job Posting</button>
+          </div>
+        </form>
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    <footer>
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ogunniranaquila" target="_blank">
+            <i class="fa-brands fa-linkedin fa-shake"></i>
+          </a>
+          <a href="https://github.com/Aquila-byte" target="_blank">
+            <i class="fa-brands fa-square-github fa-fade"></i>
+          </a>
+          
+      </div>
+      <div class="contact-info">
+          <i class="fa-solid fa-phone fa-beat-fade"></i>
+          <span>Phone: +234 814 296 6912</span>
+      </div>
+    </footer>
+   
+    
+  </main><!-- End #main -->
+
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/purecounter_vanilla.js"></script>
+  <script src="static/bootstrap.bundle.min.js"></script>
+  <script src="static/glightbox.min.js"></script>
+  <script src="static/swiper-bundle.min.js"></script>
+  <script src="static/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/main.js"></script>
+
+</body>
+
+</html>
